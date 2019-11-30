@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>代购价格计算器</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="title text-center">
+                    <h1>代购价格计算器</h1>
+                </div>
+                <div class="container">
+                    <form>
+                        <div class="form-group">
+                            <label for="ori_price_us">原价($)</label>
+                            <input type="number" class="form-control" id="ori_price_us" name="ori_price_us"
+                                placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="discount">折扣</label>
+                            <input type="number" class="form-control" id="discount" placeholder="0" min="0" max="100"
+                                disabled>
+                            <small class="form-text text-muted">* 输入美国折扣即可，比如15% off，输入15</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="extr_discount">额外折扣</label>
+                            <input type="number" class="form-control" id="extr_discount" placeholder="0" disabled
+                                min="0" max="100">
+                            <small class="form-text text-muted">* 输入格式与上方相同，仅为方便计算，如没有额外折扣可以不填</small>
+                        </div>
+                        <div class="form-group">
+                            <legend class="col-form-label">收取代购费</legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="feeOptions" id="fee_10" value="0.1"
+                                    checked>
+                                <label class="form-check-label" for="fee_10">10%</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="feeOptions" id="fee_15" value="0.15">
+                                <label class="form-check-label" for="fee_15">15%</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="feeOptions" id="fee_20" value="0.2">
+                                <label class="form-check-label" for="fee_20">20%</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exchange_rate_display">今日汇率: </label>
+                            <input type="text" class="form-control" id="exchange_rate_display" disabled
+                                style="display: inline-block; width: 50%;" value=<%= rate.toFixed(2) %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="ori_price_us_display">美金折后: </label>
+                            <input type="text" class="form-control" id="ori_price_us_display" disabled
+                                style="display: inline-block; width: 50%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="after_tax_price_us_display">美金税后: </label>
+                            <input type="text" class="form-control" id="after_tax_price_us_display" disabled
+                                style="display: inline-block; width: 50%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="rmb_price_display">人民币价: </label>
+                            <input type="text" class="form-control" id="rmb_price_display" disabled
+                                style="display: inline-block; width: 50%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="suggest_rmb_price">建议售价: </label>
+                            <input type="text" class="form-control" id="suggest_rmb_price" disabled
+                                style="display: inline-block; width: 50%;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="/main.js"></script>
+</body>
+
+</html>

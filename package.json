@@ -1,0 +1,21 @@
+{
+  "name": "price_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kefan Yang",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "https": "^1.0.0",
+    "nodejs-currency-converter": "^1.0.2",
+    "partials": "^0.1.0",
+    "request": "^2.88.0"
+  }
+}
