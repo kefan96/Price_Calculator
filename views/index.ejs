@@ -10,10 +10,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <!-- Goole Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+    </style>
+
     <title>代购价格计算器</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <a class="navbar-brand" href="#">代购价格计算器</a>
+    </nav>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -31,7 +43,7 @@
                             <label for="discount">折扣</label>
                             <input type="number" class="form-control" id="discount" placeholder="0" min="0" max="100"
                                 disabled>
-                            <small class="form-text text-muted">* 输入美国折扣即可，比如15% off，输入15</small>
+                            <small class="form-text text-muted">* 输入美国折扣即可，比如15%折扣，输入15</small>
                         </div>
                         <div class="form-group">
                             <label for="extr_discount">额外折扣</label>
